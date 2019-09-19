@@ -352,6 +352,10 @@ nav {
 	text-align: center;
 }
 
+.min425 {
+	min-height: 425px;
+}
+
 /*响应式导航*/
 .phone-nav {
 	display: inline-block;
