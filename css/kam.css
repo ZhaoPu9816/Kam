@@ -7,6 +7,10 @@ li {
 	list-style: none;
 }
 
+body>div{
+	overflow: hidden;
+}
+
 .kam-head {
 	margin-top: 25px;
 	/*margin-bottom: 25px;*/
@@ -17,6 +21,10 @@ li {
 /*导航*/
 nav {
 	text-align: center;	
+	height: 100px;
+	width: 100%;
+    text-align: center;
+    z-index: 1000;
 }
 
 .kam-nav {
@@ -46,6 +54,13 @@ nav {
 
 .kam-container {
 	padding: 0px 150px 0px;
+	transition: all 1s;
+	transform: translateY(120%);
+}
+
+.kam-container.iblock
+/*.kam-container.myserve-content*/ {
+	transform:translateY(0)
 }
 
 .kam-head-left {
@@ -72,7 +87,7 @@ nav {
     left: 0;
     position: absolute;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .s-bright-arrow .a1 {
@@ -357,18 +372,78 @@ nav {
 }
 
 /*响应式导航*/
-.phone-nav {
-	display: inline-block;
-	position: fixed;
-	top: 20px;
-	left: 20px;
-	z-index: 100;
+.sm-nav {
+	display: none;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1000;
+    padding: 1px;
 	/*background-color: #fe7074;*/
+}
+
+.sm-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1001;
+}
+
+.sm-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #ccc;
+}
+
+.sm-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+/*展开*/
+.sm-nav-open {
+	position: fixed;
+	width: 100%;
+	text-align: left;
+	background: white;
+	top: 0px;
+	z-index: 900;	
+	display: none;
+}
+
+.blank {
+	height: 60px;
+	background: white;
+}
+
+.sm-nav-open li {
+	line-height: 20px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.sm-nav-open li:last-child {
+	border-bottom: none;
+}
+
+.sm-nav-open a {
+	color: black;
+}
+
+.sm-nav-open li:hover {
+	background: #e7e7e7;
 }
 
 /*响应式*/
 @media only screen and (min-width: 768px) and (max-width: 996px) {
 	
+	.kam-container {
+		padding: 0px 100px 0px;
+	}	
 	.kam-head-left {
 	    width: 70%;
 	}
@@ -379,6 +454,18 @@ nav {
 	
 	.s-subtitle p {
 		font-size: 24px;
+	}
+	
+	.serve-item {
+	    padding: 12px 18px 12px;
+	}
+	
+	.serve-item h3 {
+		font-size: 22px;
+	}
+	
+	.serve-item p {
+	    font-size: 18px;
 	}
 	
 }
@@ -392,11 +479,11 @@ nav {
 	}
 	
 	.kam-container {
-		padding: 0px 100px 0px;
+		padding: 0px 50px 0px;
 	}
 	
 	.kam-head-left {
-	    width: 90%;
+	    width: 100%;
 	}
 	
 	.s-title p {
@@ -434,6 +521,22 @@ nav {
 	
 	.min150 {
 		min-height: 150px;
+	}
+	
+	.sm-nav {
+		display: inline-block;
+	}
+	
+	.serve-item {
+	    padding: 10px 15px 10px;
+	}
+	
+	.serve-item h3 {
+		font-size: 18px;
+	}
+	
+	.serve-item p {
+	    font-size: 15px;
 	}
 	
 }

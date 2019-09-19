@@ -15,7 +15,7 @@
 		<div class="kam-head">
 			
 			<!--导航-->
-			<nav>
+			<nav class="nav">
 				
 				<ul class="kam-nav">
 					<li><a href="">首页</a></li>
@@ -24,7 +24,7 @@
 					<li>
 						<div>
 							<img src="img/catlogo.gif" />
-							<p><strong>卡猫科技</strong></p>
+							<p class="logo-text"><strong>卡猫科技</strong></p>
 						</div>					
 					</li>
 					<li><a href="">解决方案</a></li>
@@ -35,7 +35,7 @@
 			</nav>
 			
 			<div class="kam-head-bg">
-				<div class="kam-container">
+				<div class="kam-container iblock">
 					
 					<div class="kam-head-left col-xs-6">
 						<div class="s-title">
@@ -55,13 +55,26 @@
 		</div>
 		
 		<!--响应式导航-->
-		<div class="navbar-header phone-nav">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		<div class="navbar-header sm-nav">
+			<button type="button" class="sm-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	            <span class="sr-only">Toggle navigation</span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	        </button>
+		</div>
+		<div class="sm-nav-open">
+			<div class="blank">
+				
+			</div>
+			<ul>
+				<li><a href="">首页</a></li>
+				<li><a href="">服务</a></li>
+				<li><a href="">案例</a></li>
+				<li><a href="">解决方案</a></li>
+				<li><a href="">纳贤</a></li>
+				<li><a href="">应用商店</a></li>
+			</ul>
 		</div>
 		
 		<!--三角-->
@@ -72,7 +85,7 @@
 		
 		<!--我们服务-->
 		<div class="serve">
-			<div class="kam-container">
+			<div class="kam-container myserve-content">
 				<div class="serve-title">
 					<h2>
 						<p>
@@ -134,7 +147,7 @@
 		
 		<!--案例-->
 		<div class="case">
-			<div class="kam-container">
+			<div class="kam-container mycase-content">
 				<div class="case-title">
 					<h2>
 						<p>
@@ -199,7 +212,7 @@
 		
 		<!--经典案例-->
 		<div class="case classic">
-			<div class="kam-container">
+			<div class="kam-container myclassic-content">
 				<div class="serve-title">
 					<h2>
 						<p>
@@ -270,7 +283,7 @@
 		
 		<!--招贤纳士-->
 		<div class="case">
-			<div class="kam-container">
+			<div class="kam-container myrecruit-content">
 				<div class="serve-title">
 					<h2>
 						<p>
@@ -353,7 +366,7 @@
 		
 		<!--评论-->
 		<div class="case classic comment">
-			<div class="kam-container">
+			<div class="kam-container mycomment-content">
 				<!--标题-->
 				<div class="serve-title comment-title">
 					<h2>
@@ -504,3 +517,4 @@
 </html>
 <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/Kam.js" ></script>
